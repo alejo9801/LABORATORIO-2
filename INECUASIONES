@@ -1,0 +1,26 @@
+#FORMATO DE RESPUESTA SIMBOLICA 
+
+print ("RESPUESTA SIMBOLICA DE INECUASIONES \n ------------------------------ ")
+primerSim = input("ELIGE SIMBOLO PARA ABRIR \n1.PARENTESIS ( \n2.CORCHETE [\n")
+intervalo1= input("INGRESA TU PRIMER INTERVALO: ")
+intervalo2= input("INGRESA TU SEGUNDO INTERVALO:")
+segundoSim =input ("ELEGIE SIBOLO PARA CERRAR \n1.PARENTESIS ( \n2.CORCHETE [\n")
+print("_________________________________")
+
+
+def evalua():
+    if(primerSim=="1" and segundoSim=="1"):
+        print("SIMBOLOGIA: XE(",intervalo1, ",",intervalo2,")" )
+        print("X PERTENECE A LOS LIMITES DE", intervalo1,"ABIERTO A", intervalo2, "DONDE NUNCA LLEGA A SER", intervalo1, "Y DONDE NUNCA LLEGARA A ", intervalo2)
+    elif(primerSim=="2" and segundoSim=="2"):
+        print("SIMBOLOGIA: XE[",intervalo1, ",",intervalo2,"]" )
+        print("X PERTENECE A LOS LIMITES DE", intervalo1,"CERRADO A", intervalo2,"DONDE EL LIMITE DE LLEGADA MAXIMO EM AMBOS ES DE", intervalo1,"Y", intervalo2)
+    elif(primerSim=="1" and segundoSim=="2"):
+        print("SIMBOLOGIA: XE(",intervalo1, ",",intervalo2,"]" )
+        print("X PERTENECE A LOS LIMITES DE", intervalo1,"ABIERTO A", intervalo2, "CERRADO DONDE NUNCA LLEGA A SER", intervalo1, "Y EL LIMITE DE LLEGADA MAXIMO ES DE ", intervalo2)
+    elif(primerSim=="2" and segundoSim=="1"):
+        print("SIMBOLOGIA: XE[",intervalo1, ",",intervalo2,")" )
+        print("X PERTENECE A LOS LIMITES DE", intervalo1,"CERRADO A", intervalo2, "ABIERTO DONDE EL LIMITE DE LLEGA ES DE", intervalo1, "Y DONDE NUNCA LLEGARA A SER ES", intervalo2)
+    else: print("Hubo algun error al ingresar los datos")
+
+evalua()
